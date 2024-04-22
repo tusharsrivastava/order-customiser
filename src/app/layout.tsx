@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { Container } from "@mui/material";
 import "./globals.scss";
 import styles from './layout.module.scss';
+import {CustomiserFormProvider} from "@/core";
 
 export const metadata: Metadata = {
   title: "Order Customiser",
@@ -14,11 +15,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const maxSteps = 3;
+
   return (
     <html lang="en">
       <body>
         <Container maxWidth="xl" className={clsx(styles.container)}>
-          {children}
+          <CustomiserFormProvider maxSteps={maxSteps}>
+            {children}
+          </CustomiserFormProvider>
         </Container>
       </body>
     </html>

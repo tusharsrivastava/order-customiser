@@ -1,0 +1,7 @@
+.formStep {
+    display: none;
+    
+    &.active {
+        display: flex;
+    }
+}
