@@ -4,6 +4,7 @@ import { Container } from "@mui/material";
 import "./globals.scss";
 import styles from './layout.module.scss';
 import {CustomiserFormProvider} from "@/core";
+import { shoeRecord } from "./data";
 
 export const metadata: Metadata = {
   title: "Order Customiser",
@@ -15,13 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const maxSteps = 3;
+  const maxSteps = 2;
 
   return (
     <html lang="en">
       <body>
         <Container maxWidth="xl" className={clsx(styles.container)}>
-          <CustomiserFormProvider maxSteps={maxSteps}>
+          <CustomiserFormProvider maxSteps={maxSteps} record={shoeRecord}>
             {children}
           </CustomiserFormProvider>
         </Container>

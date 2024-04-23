@@ -1,0 +1,12 @@
+.choiceCard {
+    padding: 1.5rem;
+    cursor: pointer;
+
+    &.picked {
+        border: 1px dashed #65d;
+    }
+
+    &.selected {
+        border: 2px solid #65d;
+    }
+}

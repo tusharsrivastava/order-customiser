@@ -1,0 +1,58 @@
+.gltfViewer {
+    width: 480px !important;
+    height: 300px !important;
+    background: #fff;
+}
+
+.statusBar {
+    display: flex;
+    gap: 5px;
+    flex-direction: row-reverse;
+    background: #ddd;
+    text-transform: capitalize;
+    padding: 3px 5px;
+
+    .hoveringText {
+        color: #555;
+    }
+
+    .selectionText {
+        color: #222;
+        font-weight: 600;
+    }
+}
+
+.propertyViewer {
+    border-left: 1px solid #555;
+    padding-left: 0.5rem;
+    width: 250px;
+
+    .emptyInfo {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #999;
+    }
+    
+    .propertyViewerTitle {
+        color: #333;
+        text-transform: capitalize;
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #777;
+    }
+
+    .choiceCard {
+        padding: 1.2rem;
+
+        &.selected {
+            border: 2px solid #ef3f4f;
+        }
+        
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}

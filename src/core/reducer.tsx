@@ -28,7 +28,7 @@ export const customiserFormReducer: ReducerFn = (oldState, action) => {
 
 // Utils for Reducer
 const onInit: ReducerFn = (state, action) => {
-    const { maxSteps } = action.payload;
+    const { maxSteps, record } = action.payload;
     
     let canNext = maxSteps > 1;
     let canPrev = false;
@@ -36,6 +36,10 @@ const onInit: ReducerFn = (state, action) => {
     
     return {
         ...state,
+        record: {
+            ...state.record,
+            ...(record || {})
+        },
         customiser: {
             steps: maxSteps,
             currentStep: 1,
@@ -95,7 +99,12 @@ const onPrev: ReducerFn = (state, action) => {
 };
 
 const onUpdate: ReducerFn = (state, action) => {
+    const { payload } = action;
     return {
         ...state,
+        record: {
+            ...state.record,
+            ...payload
+        }
     };
 };
