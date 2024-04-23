@@ -49,7 +49,7 @@ export const GLTFViewer: FC<PropsWithChildren<GLTFViewerPropsType>> = ({children
                             {children}
                             <Environment preset="city" />
                             <ContactShadows position={[0, -0.8, 0]} opacity={0.25} scale={10} blur={1.5} far={0.8} />
-                            <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} />
+                            <OrbitControls enableZoom={true} enablePan={false} enableRotate={true} />
                         </Suspense>
                     </Canvas>
                 </Grid>
